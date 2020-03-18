@@ -4,6 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
+declare var MoECordova: any;
 
 @Component({
   templateUrl: 'app.html'
@@ -17,6 +18,8 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
+      const moe = MoECordova.init();
+    moe.setUserAttribute('USER_ATTRIBUTE_UNIQUE_ID', 'uniqueID');
     });
   }
 }
