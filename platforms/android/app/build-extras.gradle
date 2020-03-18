@@ -1,0 +1,10 @@
+// adding the repositories block is optional. You can choose not to add this block if you have already added these repositories to your project.
+repositories {
+  google()
+  mavenCentral()
+  jcenter()
+}
+
+dependencies {
+  implementation "com.moengage:moe-android-sdk:9.8.04"
+}
